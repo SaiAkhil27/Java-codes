@@ -1,0 +1,20 @@
+class Solution:
+    def subArraySum(self,arr, n, s): 
+       #Write your code here
+           
+       total = 0 
+       
+       d = dict()
+       for i in range(n):
+           
+           total += arr[i]
+           
+           if s == total:
+               return [1, i + 1]
+           
+           if (total - s) in d:
+               return [d[total - s] + 2, i + 1]
+               
+           d[total] = i
+               
+       return [-1]
