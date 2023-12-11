@@ -1,0 +1,18 @@
+ArrayList<Integer> result=new ArrayList<>();
+        boolean checked=false;
+        Arrays.sort(arr);
+        int printed=-1;
+        for(int i=0;i<n-1;i++){
+            if(arr[i]==arr[i+1]){
+                if(printed!=arr[i]){  
+                result.add(arr[i]);
+                checked=true;
+                    printed=arr[i];
+                }
+            }
+        }
+        if(checked==false){
+            result.add(-1);
+            return  result;
+        }
+        return result;
