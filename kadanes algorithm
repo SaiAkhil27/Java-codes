@@ -1,0 +1,11 @@
+       long maxSum = Integer.MIN_VALUE;
+        long max = 0 ;
+        for(int i=0 ; i<n ; i++)
+        {
+            max = max + arr[i];
+            if(maxSum < max)
+                maxSum = max ;
+            if(max < 0)
+                max = 0;
+        }
+        return maxSum 
