@@ -1,0 +1,8 @@
+Arrays.sort(arr);
+        for(l=1;l<arr.length+1;l++)
+        {
+            if(l==k){
+                return arr[l-1];
+            }
+        }
+        return 0;
