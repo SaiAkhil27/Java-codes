@@ -1,0 +1,32 @@
+ArrayList<Integer>arr = new ArrayList<>();
+        Queue<Node>q = new LinkedList<>();
+        q.add(root1);
+        while(!q.isEmpty())
+        {
+            Node curr=q.poll();
+            arr.add(curr.data);
+            if(curr.left!=null)
+            {
+                q.add(curr.left);
+            }
+            if(curr.right!=null)
+            {
+                q.add(curr.right);
+            }
+        }
+        q.add(root2);
+        while(!q.isEmpty())
+        {
+            Node curr=q.poll();
+            arr.add(curr.data);
+            if(curr.left!=null)
+            {
+                q.add(curr.left);
+            }
+            if(curr.right!=null)
+            {
+                q.add(curr.right);
+            }
+        }
+        Collections.sort(arr);
+        return arr;
